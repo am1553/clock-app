@@ -1,0 +1,22 @@
+main {
+  position: relative;
+  overflow-y: hidden;
+  .panel {
+    background-color: #d4d4d4;
+    height: 45vh;
+    width: 100%;
+    position: absolute;
+    bottom: -100vh;
+    z-index: 10;
+    transition: all 500ms ease;
+    &__information {
+      width: 90%;
+      margin: 2rem auto;
+      .stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

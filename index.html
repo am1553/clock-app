@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>Frontend Mentor | Clock App</title>
+</head>
+<body onload="spanMore()">
+  <div class="overlay"></div>
+
+  <header id="header">
+
+    <div class="quote">
+      <div class="quote__message">
+        <p>
+          “The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”
+        </p>
+      </div>
+      <div class="quote__author">
+        <h5>Ada Lovelace</h5>
+      </div>
+    </div>
+    <div class="refresh-button"><img src="assets/desktop/icon-refresh.svg" alt=""></div>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <div class="day-status">
+        <img src="assets/desktop/icon-sun.svg" alt="">
+        <div class="day-status__greetings">
+          <h4>GOOD MORNING</h4>
+        </div>
+      </div>
+
+      <div class="time">
+        <div class="time__heading">
+          <h1 id="set-time-heading"></h1>
+        </div>
+        <div class="time__zone">
+          <span id="set-timezone"></span>
+        </div>
+      </div>
+
+      <div class="region">
+        <h3 id="set-region"></h3>
+      </div>
+
+      <button class="panel-button" id="panel-btn">
+        <span class="text-btn" id="btn-span"></span>
+
+        <div class="circle" id="btn-circle">
+          <img src="assets/desktop/icon-arrow-down.svg" alt="">
+        </div>
+        <!-- <div class="less">Less</div> -->
+      </button>
+    </div>
+
+    <div class="panel" id="panel-info">
+      <div class="panel__information">
+
+        <div class="stat">
+          <h6>current timezone</h6>
+          <h2 id="panel-timezone"></h2>
+        </div>
+        <div class="stat">
+          <h6>day of the year</h6>
+          <h2 id="panel-doy"></h2>
+        </div>
+        <div class="stat">
+          <h6>day of the week</h6>
+          <h2 id="panel-dow"></h2>
+        </div>
+        <div class="stat">
+          <h6>week number</h6>
+          <h2 id="panel-wn">42</h2>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

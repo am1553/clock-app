@@ -1,0 +1,64 @@
+main {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .container {
+    height: 55vh;
+    width: 90%;
+    margin: 0 auto;
+
+    // DAY STATUS-----------------
+    .day-status {
+      display: flex;
+
+      &__greetings {
+        margin: 0 1rem;
+      }
+    }
+
+    // TIME-----------------------
+    .time {
+      display: flex;
+      margin: 1rem 0;
+      &__zone {
+        background-color: green;
+        position: relative;
+        span {
+          align-content: flex-end;
+          position: absolute;
+          bottom: clamp(15px, 5vw, 15%);
+        }
+      }
+    }
+
+    // PANEL BUTTON----------------
+    .panel-button {
+      background-color: white;
+      height: 2.5rem;
+      width: clamp(7rem, 20vw, 8rem);
+      border-radius: 4rem;
+      border: none;
+      position: relative;
+      text-align: left;
+      margin: 3rem 0;
+      .text-btn {
+        padding-left: 1rem;
+      }
+      .circle {
+        background-color: $darkest-gray;
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

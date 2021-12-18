@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/desktop/daysky.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main {
+  height: 100%;
+}
+
+body .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+body img {
+  display: block;
+}
+
+body button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
+  line-height: clamp(1.375rem, 5vw, 1.75rem);
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(6.25rem, 15vw, 12.5rem);
+  line-height: clamp(6.25rem, 20vw, 12.5rem);
+  letter-spacing: clamp(-0.15625rem, 10vw, 0.3125rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 5vw, 3.5rem);
+  line-height: 4.25rem;
+  color: #303030;
+}
+
+h3 {
+  font-size: clamp(0.9375rem, 3vw, 1.5rem);
+  line-height: clamp(1.75rem, 5vw, 1.75rem);
+  letter-spacing: clamp(0.1875rem, 15vw, 0.3rem);
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: clamp(0.9375rem, 2vw, 1.25rem);
+  line-height: clamp(1.5625rem, 5vw, 1.75rem);
+  letter-spacing: clamp(0.1875rem, 5vw, 0.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
+  line-height: clamp(1.375rem, 5vw, 1.75rem);
+}
+
+h6 {
+  font-size: clamp(0.625rem, 3vw, 0.9375rem);
+  line-height: 1.75rem;
+  letter-spacing: clamp(0.125rem, 5vw, 0.1875rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #303030;
+}
+
+span {
+  font-size: clamp(0.9375rem, 3vw, 2.5rem);
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.text-btn {
+  color: gray;
+  font-weight: 700;
+  letter-spacing: clamp(0.23438rem, 1vw, 0.3125rem);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+header {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .quote {
+  width: 90%;
+}
+
+main {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .container {
+  height: 55vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .container .day-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .day-status__greetings {
+  margin: 0 1rem;
+}
+
+main .container .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+main .container .time__zone {
+  background-color: green;
+  position: relative;
+}
+
+main .container .time__zone span {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  position: absolute;
+  bottom: clamp(15px, 5vw, 15%);
+}
+
+main .container .panel-button {
+  background-color: white;
+  height: 2.5rem;
+  width: clamp(7rem, 20vw, 8rem);
+  border-radius: 4rem;
+  border: none;
+  position: relative;
+  text-align: left;
+  margin: 3rem 0;
+}
+
+main .container .panel-button .text-btn {
+  padding-left: 1rem;
+}
+
+main .container .panel-button .circle {
+  background-color: #303030;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  position: relative;
+  overflow-y: hidden;
+}
+
+main .panel {
+  background-color: #d4d4d4;
+  height: 45vh;
+  width: 100%;
+  position: absolute;
+  bottom: -100vh;
+  z-index: 10;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+main .panel__information {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+main .panel__information .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=index.css.map */
