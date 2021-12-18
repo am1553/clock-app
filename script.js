@@ -159,3 +159,43 @@ function weekNumber() {
 }
 
 weekNumber();
+
+
+// NIGHT SHIFT
+
+function change() {
+    let today = new Date();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+
+    let time = `${hours}${minutes}`;
+    
+    if(time > 1830) {
+        nightTime();
+    } else if(time === 0000) {
+        dayTime();
+    }
+
+}
+
+change();
+
+function nightTime() {
+    const body = document.getElementsByTagName('body');
+    body[0].style.background = 'url(./../assets/desktop/nightsky.jpg) no-repeat';
+    body[0].style.backgroundSize = 'cover';
+    body[0].style.backgroundPosition = 'center';
+
+    const greetingText = document.getElementById('greeting-text');
+    greetingText.innerText = 'good night'
+}
+
+function dayTime() {
+    const body = document.getElementsByTagName('body');
+    body[0].style.background = 'url(./../assets/desktop/daysky.jpg) no-repeat';
+    body[0].style.backgroundSize = 'cover';
+    body[0].style.backgroundPosition = 'center';
+
+    const greetingText = document.getElementById('greeting-text');
+    greetingText.innerText = 'good morning'
+}
