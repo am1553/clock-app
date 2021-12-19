@@ -169,37 +169,40 @@ function change() {
     let minutes = today.getMinutes();
 
     let time = `${hours}${minutes}`;
-    
+    const body = document.getElementById('body');
+
     if(time > 1830) {
-        nightTime();
+        body.classList.add('night');
+        body.classList.remove('day');
     } else if(time > 0000) {
-        dayTime();
+        body.classList.add('day');
+        body.classList.remove('night');
     }
 
 }
 
 change();
 
-function nightTime() {
-    const body = document.getElementById('body');
-    body.style.backgroundImage = 'url(../assets/desktop/nightsky.jpg)';
-    body.style.backgroundSize = 'cover';
-    body.style.backgroundPosition = 'center';
+// function nightTime() {
+//     const body = document.getElementById('body');
+//     body.style.backgroundImage = 'url(../assets/desktop/nightsky.jpg)';
+//     body.style.backgroundSize = 'cover';
+//     body.style.backgroundPosition = 'center';
 
-    const greetingText = document.getElementById('greeting-text');
-    greetingText.innerText = 'good night';
-}
+//     const greetingText = document.getElementById('greeting-text');
+//     greetingText.innerText = 'good night';
+// }
 
-function dayTime() {
-    const body = document.getElementById('body');
+// function dayTime() {
+//     const body = document.getElementById('body');
 
-    body.style.background = `url('../assets/desktop/daysky.jpg') no-repeat` ;
-    body.style.backgroundSize = 'cover';
-    body.style.backgroundPosition = 'center';
+//     body.style.background = `url('../assets/desktop/daysky.jpg') no-repeat` ;
+//     body.style.backgroundSize = 'cover';
+//     body.style.backgroundPosition = 'center';
 
-    const greetingText = document.getElementById('greeting-text');
-    greetingText.innerText = 'good morning';
-}
+//     const greetingText = document.getElementById('greeting-text');
+//     greetingText.innerText = 'good morning';
+// }
 
 
 
