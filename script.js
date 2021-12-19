@@ -170,13 +170,16 @@ function change() {
 
     let time = `${hours}${minutes}`;
     const body = document.getElementById('body');
+    const greetingText = document.getElementById('greeting-text');
 
     if(time > 1830) {
         body.classList.add('night');
         body.classList.remove('day');
+        greetingText.innerText = 'good night';
     } else if(time > 0000) {
         body.classList.add('day');
         body.classList.remove('night');
+        greetingText.innerText = 'good morning';
     }
 
 }
@@ -189,8 +192,7 @@ change();
 //     body.style.backgroundSize = 'cover';
 //     body.style.backgroundPosition = 'center';
 
-//     const greetingText = document.getElementById('greeting-text');
-//     greetingText.innerText = 'good night';
+
 // }
 
 // function dayTime() {
@@ -201,7 +203,7 @@ change();
 //     body.style.backgroundPosition = 'center';
 
 //     const greetingText = document.getElementById('greeting-text');
-//     greetingText.innerText = 'good morning';
+//     
 // }
 
 
