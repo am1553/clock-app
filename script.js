@@ -193,7 +193,7 @@ function nightTime() {
 function dayTime() {
     const body = document.getElementById('body');
 
-    body.style.background = `url(../assets/desktop/daysky.jpg) no-repeat` ;
+    body.style.background = `url('../assets/desktop/daysky.jpg') no-repeat` ;
     body.style.backgroundSize = 'cover';
     body.style.backgroundPosition = 'center';
 
