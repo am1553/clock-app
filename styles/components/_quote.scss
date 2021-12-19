@@ -6,4 +6,11 @@ header {
   .quote {
     width: 90%;
   }
+  .refresh-button {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: none;
+  }
 }

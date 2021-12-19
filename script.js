@@ -172,7 +172,7 @@ function change() {
     
     if(time > 1830) {
         nightTime();
-    } else if(time === 0000) {
+    } else if(time > 0000) {
         dayTime();
     }
 
@@ -181,21 +181,65 @@ function change() {
 change();
 
 function nightTime() {
-    const body = document.getElementsByTagName('body');
-    body[0].style.background = 'url(./../assets/desktop/nightsky.jpg) no-repeat';
-    body[0].style.backgroundSize = 'cover';
-    body[0].style.backgroundPosition = 'center';
+    const body = document.getElementById('body');
+    body.style.backgroundImage = 'url(../assets/desktop/nightsky.jpg)';
+    body.style.backgroundSize = 'cover';
+    body.style.backgroundPosition = 'center';
 
     const greetingText = document.getElementById('greeting-text');
-    greetingText.innerText = 'good night'
+    greetingText.innerText = 'good night';
 }
 
 function dayTime() {
-    const body = document.getElementsByTagName('body');
-    body[0].style.background = 'url(./../assets/desktop/daysky.jpg) no-repeat';
-    body[0].style.backgroundSize = 'cover';
-    body[0].style.backgroundPosition = 'center';
+    const body = document.getElementById('body');
+
+    body.style.background = `url(../assets/desktop/daysky.jpg) no-repeat` ;
+    body.style.backgroundSize = 'cover';
+    body.style.backgroundPosition = 'center';
 
     const greetingText = document.getElementById('greeting-text');
-    greetingText.innerText = 'good morning'
+    greetingText.innerText = 'good morning';
+}
+
+
+
+// QUOTES
+
+const quotes = {
+    quote: [
+        '“The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”',
+        '"I have always been delighted at the prospect of a new day, a fresh try, one more start, with perhaps a bit of magic waiting somewhere behind the morning."',
+        '"Every day I feel is a blessing from God. And I consider it a new beginning. Yeah, everything is beautiful."',
+        '"There was never a night or a problem that could defeat sunrise or hope."',
+        `"If you're changing the world, you're working on important things. You're excited to get up in the morning."`,
+    ],
+    author: [
+        'Ada Lovelace',
+        'J. B. Priestley',
+        'Prince',
+        'Bernard Williams',
+        `Larry Page`,
+    ],
+};
+
+
+const refreshBtn = document.getElementById('refreshBtn');
+
+refreshBtn.addEventListener('click', nextQuote);
+
+
+let count = 0;
+function nextQuote(){
+    count++;
+
+    const quoteText = document.getElementById('quote-text');
+    const quoteAuthor = document.getElementById('quote-author');
+    if(count < quotes.quote.length) {
+        quoteText.innerText = quotes.quote[count];
+        quoteAuthor.innerText = quotes.author[count];
+    } else {
+        count = 0;
+        quoteText.innerText = quotes.quote[count];
+        quoteAuthor.innerText = quotes.author[count];
+    }
 }

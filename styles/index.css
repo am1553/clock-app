@@ -8,8 +8,6 @@
 body {
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +130,20 @@ header {
 
 header .quote {
   width: 90%;
+}
+
+header .refresh-button {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: none;
 }
 
 main {

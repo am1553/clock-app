@@ -10,22 +10,22 @@
   <link rel="stylesheet" href="styles/index.css">
   <title>Frontend Mentor | Clock App</title>
 </head>
-<body onload="spanMore()">
+<body onload="spanMore()" id="body">
   <div class="overlay"></div>
 
   <header id="header">
 
     <div class="quote">
       <div class="quote__message">
-        <p>
+        <p id="quote-text">
           “The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”
         </p>
       </div>
       <div class="quote__author">
-        <h5>Ada Lovelace</h5>
+        <h5 id="quote-author">Ada Lovelace</h5>
       </div>
     </div>
-    <div class="refresh-button"><img src="assets/desktop/icon-refresh.svg" alt=""></div>
+    <button class="refresh-button" id="refreshBtn"><img src="assets/desktop/icon-refresh.svg" alt=""></button>
   </header>
 
   <main id="main">
